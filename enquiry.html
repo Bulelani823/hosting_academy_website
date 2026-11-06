@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry - Pawsitive Pet Academy</title>
+
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+    <!--One of the three main components of the website: Header Tag-->
+     <header class="site-header">
+
+        <div class="header-left">
+            <img 
+        src="images/academy.png"
+        width="80"
+        height="80"
+        >  
+        <span class="site-title"><em><strong>Pawsitive Pet Academy</strong></em></span>
+        </div>
+
+        <div class="header-right">
+            <span class="current-page">Enquiry</span>
+            <nav class="header-nav">
+         <!--Navigation of the website-->
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="calculate.html">Calculate</a>
+        <a href="enquiry.html">Enquiry</a>
+        <a href="contact.html">Contact Us</a>
+            </nav>
+        </div> 
+</header>
+    <main>
+        <section class="enquiry-form">
+
+            <!--Subheading of what they are all about-->
+            <h2 class="intro">Enquiry Form:</h2>
+            <!--Text showing the vision and mission statement and also shows deep undertones of which target audience they appeal to-->
+            <p id="info"><strong>We value your feedback and inquiries. Please fill out the form below, and we will get back to you as soon as possible.</strong></p>
+    
+        <!--Start of the online enquiry of the website-->
+            <h2>Online Enquiry</h2>
+
+            <form id="myForm">
+
+        <label for="fullName">Full Name:</label>
+
+        <input type="text" id="fullname"
+        name="fullname">
+
+        <span id="nameError" class="error"></span>
+        <br> 
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email">
+
+        <span id="emailError" 
+        class="error"></span>
+        <br> 
+
+        <!-- Subject -->
+        <label for="subject">Subject:</label>
+        <br>
+
+        <input
+        type="text"
+        id="subject"
+        name="subject"
+        placeholder="Enter a subject"
+        >
+
+        <br><br>
+
+        <!-- Message -->
+        <label for="message">What is your inquiry about?:</label>
+        <br>
+
+        <textarea
+        id="message"
+        name="message"
+        rows="5"
+        cols="30"
+        placeholder="Enter your message"
+        ></textarea>
+
+            <!--Submit and Reset buttons for the form-->
+                <button type="submit">Register</button>
+                <button type="reset">Clear Form</button>
+
+                </form>
+        </section>
+
+    </main>
+    <!--Image of a dog to emphasize the theme-->
+    <article class="card">
+
+    <div id="image">
+        <img src="images/pet-theme.webp"
+        alt="Placeholder Image"
+        width="400">
+
+    </div>
+    </article>
+
+    <<footer>
+         <br><br>
+        <!--Footer content which is need to every single page of the website-->
+        &copy;2026 Pawsitive Pet Academy. All rights reserved.
+        Contact us on +27 xxx xxx xx
+         <br><br>
+        <a href="https://github.com/EMKNPM/xhaw5112-group-1-xhaw5112-task03-website-gr01-bulelani823">Visit Our GitHub</a>
+        <img 
+    src="images/academy.png"
+    width="50"
+    height="30"
+    >     
+    </footer>
+
+    <script src="JavaScript/form-validation.js"></script>
+
+</body>
+</html>

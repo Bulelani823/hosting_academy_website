@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Six-month Long Courses - Pawsitive Pet Academy</title>
+
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+     <!--One of the three main components of the website: Header Tag-->
+     <header class="site-header">
+
+        <div class="header-left">
+            <img 
+        src="images/academy.png"
+        width="80"
+        height="80"
+        >  
+        <span class="site-title"><em><strong>Pawsitive Pet Academy</strong></em></span>
+        </div>
+
+        <div class="header-right">
+            <span class="current-page">Six-month Courses</span>
+            <nav class="header-nav">
+         <!--Navigation of the website-->
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="calculate.html">Calculate</a>
+        <a href="enquiry.html">Enquiry</a>
+        <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>  
+
+    </header>
+
+    <main>
+
+        <h2 class="intro">Six-month Courses</h2>
+
+        <hr>
+
+    <p>Welcome to our six-month long courses! These comprehensive programs are 
+        designed to provide you with in-depth knowledge and practical experience 
+        in the pet care industry.</p>
+
+            <div class="card-container">
+
+                <!--Course 1-->
+                <article class="courses-card">
+                    <img src="images/course1.jpg"
+        alt="Nature Image 1"
+        onclick="openLightbox(this.src)">
+
+                    <div class="card-content">
+                        <h3>Canine Obedience Training - R1500</h3>
+
+                        <p class="description">
+                            To teach effective dog obedience and behavioural training techniques.
+                        </p>
+
+                        <p>
+                            Content: Basic commands,leash training, behaviour correction
+                            positive reinforcement and socialisation techniques
+                        </p>
+
+                        <!--Accordion button-->
+                        <button class="accordion" aria-expanded="false">
+                            More infomation
+                        </button>
+
+                        <!--Hidden Information-->
+                        <div class="panel">
+                            <div class="panel-content">
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!--Course 2-->
+                <article class="courses-card">
+                    <img src="images/course2.webp"
+        alt="Nature Image 2"
+        onclick="openLightbox(this.src)">
+
+                    <div class="card-content">
+                        <h3>Pet Grooming - R1500</h3>
+
+                        <p class="description">
+                            To provide professional grooming skills for domestic pets
+                        </p>
+
+                        <p>
+                            Content: Coat care, bathing techniques, nail trimming
+                            ear and eye cleaning and grooming equipment
+                        </p>
+
+                        <!--Accordion button-->
+                        <button class="accordion" aria-expanded="false">
+                            More infomation
+                        </button>
+
+                        <!--Hidden Information-->
+                        <div class="panel">
+                            <div class="panel-content">
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!--Course 3-->
+                <article class="courses-card">
+                    <img src="images/course 3.jpg"
+        alt="Nature Image 3"
+        onclick="openLightbox(this.src)">
+                    <div class="card-content">
+
+                        <h3>Animal Behaviour - R1500</h3>
+
+                        <p class="description">
+                            To understand common pet behaviours and improve communication with animals
+                        </p>
+
+                        <p>
+                            Content: Animal psychology, reading body language, stress management,
+                            behaviour modification and enrichment activities.
+                        </p>
+
+                        <!--Accordion button-->
+                        <button class="accordion" aria-expanded="false">
+                            More infomation
+                        </button>
+
+                        <!--Hidden Information-->
+                        <div class="panel">
+                            <div class="panel-content">
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+        
+
+            <!--Course 4-->
+                <article class="courses-card">
+                    <img src="images/canine_obedience.jpg"
+        alt="Nature Image 3"
+        onclick="openLightbox(this.src)">
+
+                    <div class="card-content">
+                        <h3>Pet Business Management - R1500</h3>
+
+                        <p class="description">
+                            To prepare learners to operate a succesful pet-related business.
+                        </p>
+
+                        <p>
+                            Content: Basic customer services, marketing, business planning
+                            financial management and legal requirements
+                        </p>
+
+                        <!--Accordion button-->
+                        <button class="accordion" aria-expanded="false">
+                            More infomation
+                        </button>
+
+                        <!--Hidden Information-->
+                        <div class="panel">
+                            <div class="panel-content">
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+    <!--Lightbox-->
+    <div class="lightbox" 
+    id="lightbox"
+    role="dialog" 
+    aria-modal="true" 
+    aria-label="Enlarged image"
+    onclick="closeLightbox()">
+
+        <!--Close Button-->
+        <button 
+        class="close" 
+        type="button" 
+        aria-label="Close image" 
+        onclick="closeLightbox()">
+            &times;
+        </button>
+
+        <!--Enlarged Image-->
+        <img id="lightboxImage"
+        src=""
+        alt="Enlarged image"
+        onclick="event.stopPropagation()">
+
+        <!--It is to make sure that any image that the user 
+        clicks on is enlarged-->
+    </div>
+
+    <!--Lightbox Overlay-->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Expanded Destination Image">
+
+        <!--Close button-->
+        <button class="close-btn" id="closedLightbox" aria-label="Close Image">
+
+            &times;
+        </button>
+
+        <!--Enlarged image-->
+        <img src="" alt="" id="lightboxImage">
+
+    </div>
+
+    
+    <label for="course-select">Select a course:</label>
+
+    <select id="course-select">
+        <option value="course1">Course 1: Professional Pet Grooming</option>
+        <option value="course2">Course 2: Animal Behaviour</option>
+        <option value="course3">Course 3: Canine Obedience Training</option>
+        <option value="course4">Course 4: Pet Business Management</option>
+    </select>
+
+    <img 
+    src="images/pet-theme.webp"
+    width="300"
+    height="300"
+    >
+
+    <a href="obdience.html">Show More</a>
+
+    </main>
+
+    <footer>
+         <br><br>
+        <!--Footer content which is need to every single page of the website-->
+        &copy;2026 Pawsitive Pet Academy. All rights reserved.
+        Contact us on +27 xxx xxx xx
+        <a href="https://github.com/EMKNPM/xhaw5112-group-1-xhaw5112-task03-website-gr01-bulelani823">Visit Our GitHub</a>
+        <img 
+    src="images/academy.png"
+    width="50"
+    height="30"
+    >     
+    </footer>
+
+    <script src="JavaScript/lightbox.js"></script>
+    <script src="JavaScript/services.js">
+    </script>
+    <script src="JavaScript/accordion.js">
+    </script>
+    
+</body>
+</html>

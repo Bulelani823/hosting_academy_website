@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page - Pawsitive Pet Academy</title>
+
+    <link rel="stylesheet" href="CSS/styles.css">
+
+      <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:#aca05e;
+            margin: 0;
+
+        }
+
+        h1{
+            text-align: center;
+            color: #333;
+
+        }
+
+        .accordion-container{
+            max-width: 600px;
+            margin: 30px auto;
+
+        }
+
+        .accordion{
+            background-color: #ffbd07;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+
+        }
+
+        .accordion:hover{
+            background-color: #b37a00;
+
+        }
+
+        .accordion.active{
+            background-color: #856d00;
+
+        }
+
+        .panel{
+            background-color: white;
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease,
+            padding 0.3s ease;
+
+        }
+
+        .panel.open{
+            padding: 15px 18px;
+
+        }
+
+        .panel p{
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+
+        }
+
+        #Next{
+            text-align: center;
+        }
+
+        </style>
+</head>
+<body>
+
+    <!--One of the three main components of the website: Header Tag-->
+     <header class="site-header">
+
+        <div class="header-left">
+            <img 
+        src="images/academy.png"
+        width="80"
+        height="80"
+        >  
+        <span class="site-title"><em><strong>Pawsitive Pet Academy</strong></em></span>
+        </div>
+
+        <div class="header-right">
+            <span class="current-page">Home Page</span>
+            <nav class="header-nav">
+         <!--Navigation of the website-->
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="calculate.html">Calculate</a>
+        <a href="enquiry.html">Enquiry</a>
+        <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>  
+
+    </header>
+
+     <main class="card">
+        <h2 class="intro"><strong><em>Welcome to Pawsitive Pet Academy</em></strong></h2>
+        <hr>
+        <p>
+            This is an initiative started by Sarah Smith which educate pet owners
+         on how to give their beloved pets the care they deserve. This is a platform 
+         where you can find information on pet care, training, and first aid. We also 
+         offer courses and services to help you become a better pet owner.
+
+         We inspire future generations on pet care and making sure that we are
+             able to spread awareness to this cause not just nationally but internationally.
+             This cause is very important to us and we will make sure that we are able to deliver 
+             top-notch education.
+        </p>
+
+
+        <h2>Info About Us</h2>
+        <hr>
+        <p>Welcome to Pawsitive Pet Academy! We are dedicated to providing the best pet care 
+        and training services within this evergrowing pet community. We are committed to helping
+        pet owners provide the best care for their beloved companions.</p>
+
+        <p>We strive to make sure that we are able to deliver top-notch education
+            to every communities. We are committed to helping pet owners provide 
+            the best care for their beloved companions.</p>
+        </p>
+
+        <h2>Recommended Courses For You:</h2>
+
+        <p>Open the Accordion to find more information:</p>
+
+        <!--An accordion of the recommended course for beginners so they can get started-->
+        <div class="accordion-container">
+        <!--This is where the bulk of the information is going to be-->
+
+        <!-- Accordion-->
+         <button class="accordion" aria-expanded="false">
+            Puppy Care
+         </button>
+
+         <div class="panel">
+            <p>You will learn how to take care of the little
+                ones 
+            </p>
+            <img
+            src="images/course1.jpg"
+            width="450"
+            height="300">
+         </div>
+
+         <!-- Accordion 2-->
+         <button class="accordion" aria-expanded="false">
+            Animal Behaviour
+         </button>
+
+         <div class="panel">
+            <p>You learn how to keep your beloved pets under
+                control and teach them good mannerisms
+            </p>
+            <img
+            src="images/course2.webp"
+            width="450"
+            height="300">
+         </div>
+
+        <!-- Accordion 3-->
+         <button class="accordion" aria-expanded="false">
+            Pet First Aid
+         </button>
+
+         <div class="panel">
+            <p>You will be able to get to learn how to 
+                keep your furry buddies safe from injures
+            </p>
+            <img
+            src="images/course 3.jpg"
+            width="450"
+            height="300">
+         </div>
+
+        <br><br>
+
+        <div id="image">
+        <img src="images/pet-theme.webp"
+        alt="Placeholder Image"
+        width="400">
+
+        <br><br>
+        
+        <a href="about.html">Next Page</a>
+
+    </main> 
+
+    <footer>
+         <br><br>
+        <!--Footer content which is need to every single page of the website-->
+        &copy;2026 Pawsitive Pet Academy. All rights reserved.
+        Contact us on +27 xxx xxx xx
+         <br><br>
+        <a href="https://github.com/EMKNPM/xhaw5112-group-1-xhaw5112-task03-website-gr01-bulelani823">Visit Our GitHub</a>
+        <img 
+    src="images/academy.png"
+    width="50"
+    height="30"
+    >     
+    </footer>
+
+    <script src="JavaScript/accordion.js"></script>
+   
+</body>
+</html>

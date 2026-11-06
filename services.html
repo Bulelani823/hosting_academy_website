@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Pawsitive Pet Academy</title>
+
+    <link rel="stylesheet" href="CSS/styles.css">
+
+    <!--Include jQuery Library-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: #aca05e;
+        }
+
+    
+        h1{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            font-size: 40px;
+            color: black;
+        }
+
+        p{
+            color: black;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+
+        
+        .gallery img{
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+
+            transition: transform 0.3s ease,
+            opacity 0.3s ease;
+        }
+
+        .gallery img:hover{
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+
+        .lightbox{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background-color: rgba(0, 0, 0, 0.9);
+
+            justify-content: center;
+            align-items: center;
+
+            z-index: 1000;
+        }
+
+        .lightbox img{
+            max-width: 80%;
+            max-height: 80%;
+
+            animation: zoomIn 0.3s ease;
+        }
+
+        @keyframes zoomIn
+        {
+            
+            from{
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            
+            to{
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+  
+        .close{
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        .close:hover{
+            color: red;
+        }
+
+        input{
+            text-align: left;
+            justify-content: left;
+        }
+
+        input:hover{
+            color: orange;
+        }
+        label{
+            text-align: left;
+            font-weight: 500;
+        }
+
+    </style>
+    
+</head>
+<body>
+     <!--One of the three main components of the website: Header Tag-->
+     <header class="site-header">
+
+        <div class="header-left">
+            <img 
+        src="images/academy.png"
+        width="80"
+        height="80"
+        >  
+        <span class="site-title"><em><strong>Pawsitive Pet Academy</strong></em></span>
+        </div>
+
+        <div class="header-right">
+            <span class="current-page">Services</span>
+            <nav class="header-nav">
+         <!--Navigation of the website-->
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="calculate.html">Calculate</a>
+        <a href="enquiry.html">Enquiry</a>
+        <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+     </header>
+
+    <main>
+
+        <h2 class="intro">Welcome to the services page!</h2>
+<!--Search Section-->
+        <section class="search-section">
+
+            <h2>Find your preferred course</h2>
+
+            <p>Search for a course</p>
+
+            <input type="text" id="searchinput" placeholder="Search Courses..."
+                aria-activedescendant="Search Courses">
+
+        </section>
+
+        <!--Courses Card-->
+        <section class="destination">
+            <h2>Courses Available Now:</h2>
+
+            <div class="card-container">
+
+                <!--Course 1-->
+                <article class="courses-card">
+                    <img src="images/course1.jpg"
+        alt="Nature Image 1"
+        onclick="openLightbox(this.src)">
+
+                    <div class="card-content">
+                        <h3>Canine Obedience Training - R1500</h3>
+
+                        <p class="description">
+                            To teach effective dog obedience and behavioural training techniques.
+                        </p>
+
+                        <p>
+                            Content: Basic commands,leash training, behaviour correction
+                            positive reinforcement and socialisation techniques
+                        </p>
+
+                        <!--Accordion button-->
+                        <button class="accordion" aria-expanded="false">
+                            More infomation
+                        </button>
+
+                        <!--Hidden Information-->
+                        <div class="panel">
+                            <div class="panel-content">
+                                <p>
+                                    Welcome to our canine obedience training page! Our training programs are designed to 
+            help you build a strong bond with your dog while teaching them essential obedience skills.
+
+        Our experienced trainers use positive reinforcement techniques to ensure that your dog learns
+             in a safe and enjoyable environment. Whether you're looking to address behavioral issues or 
+             simply want to enhance your dog's obedience, we have the right program for you.
+
+        Join us today and take the first step towards a well-behaved and happy canine companion!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!--Course 2-->
+                <article class="courses-card">
+                    <img src="images/course2.webp"
+        alt="Nature Image 2"
+        onclick="openLightbox(this.src)">
+
+                    <div class="card-content">
+                        <h3>Pet Grooming - R1500</h3>
+
+                        <p class="description">
+                            To provide professional grooming skills for domestic pets
+                        </p>
+
+                        <p>
+                            Content: Coat care, bathing techniques, nail trimming
+                            ear and eye cleaning and grooming equipment
+                        </p>
+
+                        <!--Accordion button-->
+                        <button class="accordion" aria-expanded="false">
+                            More infomation
+                        </button>
+
+                        <!--Hidden Information-->
+                        <div class="panel">
+                            <div class="panel-content">
+                                <p>
+                                    Welcome to our pet grooming page! Our grooming services are designed to keep your pets 
+            looking and feeling their best. We offer a range of grooming options, including baths, 
+            haircuts, nail trimming, and more.
+
+        Our experienced groomers use gentle techniques and high-quality products to ensure that 
+            your pets have a comfortable and enjoyable grooming experience. Whether you have a dog, 
+            cat, or other furry friend, we can help them look their best!
+
+        Contact us today to schedule a grooming appointment for your beloved pet!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!--Course 3-->
+                <article class="courses-card">
+                    <img src="images/course 3.jpg"
+        alt="Nature Image 3"
+        onclick="openLightbox(this.src)">
+                    <div class="card-content">
+
+                        <h3>Animal Behaviour - R1500</h3>
+
+                        <p class="description">
+                            To understand common pet behaviours and improve communication with animals
+                        </p>
+
+                        <p>
+                            Content: Animal psychology, reading body language, stress management,
+                            behaviour modification and enrichment activities.
+                        </p>
+
+                        <!--Accordion button-->
+                        <button class="accordion" aria-expanded="false">
+                            More infomation
+                        </button>
+
+                        <!--Hidden Information-->
+                        <div class="panel">
+                            <div class="panel-content">
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+        
+
+            <!--Course 4-->
+                <article class="courses-card">
+                    <img src="images/canine_obedience.jpg"
+        alt="Nature Image 3"
+        onclick="openLightbox(this.src)">
+
+                    <div class="card-content">
+                        <h3>Pet Business Management - R1500</h3>
+
+                        <p class="description">
+                            To prepare learners to operate a succesful pet-related business.
+                        </p>
+
+                        <p>
+                            Content: Basic customer services, marketing, business planning
+                            financial management and legal requirements
+                        </p>
+
+                        <!--Accordion button-->
+                        <button class="accordion" aria-expanded="false">
+                            More infomation
+                        </button>
+
+                        <!--Hidden Information-->
+                        <div class="panel">
+                            <div class="panel-content">
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!--Course 5-->
+                <article class="courses-card">
+                    <img src="images/grooming.jpg"
+        alt="Nature Image 3"
+        onclick="openLightbox(this.src)">
+                    <div class="card-content">
+                        <h3>Puppy Care - R750</h3>
+
+                        <p class="description">
+                            To provide new puppy owners with essential care knowledge
+                        </p>
+
+                        <p>
+                            Content: Feeding, vaccinations, toliet training, exercise
+                            and socialisation
+                        </p>
+
+                        <!--Accordion button-->
+                        <button class="accordion" aria-expanded="false">
+                            More infomation
+                        </button>
+
+                        <!--Hidden Information-->
+                        <div class="panel">
+                            <div class="panel-content">
+                                <p>
+                                     Welcome to our puppy care page! We understand that bringing a new puppy into your home
+             is an exciting and joyful experience. Our puppy care services are designed to help you
+              provide the best care for your furry friend during their early stages of life.
+
+        Our team of experienced trainers and caregivers will guide you through essential aspects
+             of puppy care, including nutrition, socialization, training, and health. We offer personalized
+              advice and support to ensure that your puppy grows up happy, healthy, and well-adjusted.
+
+        Join us today and give your puppy the best start in life!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!--Course 6-->
+                <article class="courses-card">
+                    <img src="images/first-aid.webp"
+        alt="Nature Image 3"
+        onclick="openLightbox(this.src)">
+                    <div class="card-content">
+                        <h3>Pet First Aid - R750</h3>
+
+                        <p class="description">
+                            To provide emergency first aid knowledge for pets
+                        </p>
+
+                        <p>
+                            Content: minor injuries, CPR basics, poison awareness, heatstroke 
+                            and emergency transport
+                        </p>
+
+                        <!--Accordion button-->
+                        <button class="accordion" aria-expanded="false">
+                            More infomation
+                        </button>
+
+                        <!--Hidden Information-->
+                        <div class="panel">
+                            <div class="panel-content">
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!--Course 7-->
+                <article class="courses-card">
+                     <img src="images/pet-theme.webp"
+        alt="Nature Image 3"
+        onclick="openLightbox(this.src)">
+                    <div class="card-content">
+                        <h3>Basic Dog Walking - R750</h3>
+
+                        <p class="description">
+                            To teach safe and professional dog walking practices
+                        </p>
+
+                        <p>
+                            Content: walking equipment, handling multiple dogs
+                            safety procedures and exercies routines
+                        </p>
+
+                        <!--Accordion button-->
+                        <button class="accordion" aria-expanded="false">
+                            More infomation
+                        </button>
+
+                        <!--Hidden Information-->
+                        <div class="panel">
+                            <div class="panel-content">
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+     <!--Lightbox-->
+    <div class="lightbox" 
+    id="lightbox"
+    role="dialog" 
+    aria-modal="true" 
+    aria-label="Enlarged image"
+    onclick="closeLightbox()">
+        <!--Close Button-->
+        <button 
+        class="close" 
+        type="button" 
+        aria-label="Close image" 
+        onclick="closeLightbox()">
+            &times;
+        </button>
+        <!--Enlarged Image-->
+        <img id="lightboxImage"
+        src=""
+        alt="Enlarged image"
+        onclick="event.stopPropagation()">
+        <!--It is to make sure that any image that the user 
+        clicks on is enlarged-->
+    </div>
+
+    <!--Lightbox Overlay-->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Expanded Destination Image">
+
+        <!--Close button-->
+        <button class="close-btn" id="closedLightbox" aria-label="Close Image">
+
+            &times;
+        </button>
+
+        <!--Enlarged image-->
+        <img src="" alt="" id="lightboxImage">
+
+    </div>
+
+    <br><br>
+
+    </main>
+
+    <div class="info-box">
+        <label for="order">Select your order:</label>
+        <br><br>
+        <!--Your order-->
+             <!--Shows the selection of the different options of the food that you will be able to get-->
+                <input type="checkbox"
+                id="care"
+                name="order"
+                value="Puppy-care">
+
+                <label for="Puppy-care">Puppy Care</label>
+
+                <br>
+
+                <input type="checkbox"
+                id="behaviour"
+                name="order"
+                value="Animal-behaviour">
+
+                <label for="Animal-behaviour">Animal Behaviour</label>
+                <br>
+
+                <input type="checkbox"
+                id="first-aid"
+                name="order"
+                value="Pet-first-aid">
+
+                <label for="Pet-first-aid">Pet First Aid</label>
+                <br>
+
+                <input type="checkbox"
+                id="obedience"
+                name="order"
+                value="Obedience">
+
+                <label for="Obedience">Canine Obedience Training</label>
+                <br>
+
+                <input type="checkbox"
+                id="grooming"
+                name="order"
+                value="Pet-grooming">
+
+                <label for="Pet-grooming">Pet Grooming</label>
+                <br>
+
+                <input type="checkbox"
+                id=""
+                name="order"
+                value="">
+
+                <label for="">Pet Business Management</label>
+                <br>
+
+                <input type="checkbox"
+                id=""
+                name="order"
+                value="">
+
+                <label for="">Basic Dog Walking</label>
+                <br>
+
+                <!--Button to submit the order-->
+        <button type="submit">Select</button>
+        </div>
+
+        <br><br>
+    <a href="big_course.html">Show Six-Month Courses</a>
+        <br><br>
+    <a href="small_course.html">Show Six-Week Courses</a>
+    <br><br>
+
+    <footer>
+         <br><br>
+        <!--Footer content which is need to every single page of the website-->
+        &copy;2026 Pawsitive Pet Academy. All rights reserved.
+        Contact us on +27 xxx xxx xx
+        <br><br>
+        <a href="https://github.com/EMKNPM/xhaw5112-group-1-xhaw5112-task03-website-gr01-bulelani823">Visit Our GitHub</a>
+        <img 
+    src="images/academy.png"
+    width="50"
+    height="30"
+    >     
+    </footer>
+
+    <script src="JavaScript/lightbox.js">
+    </script>
+    <script src="JavaScript/services.js">
+    </script>
+    <script src="JavaScript/accordion.js">
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Pawsitive Pet Academy</title>
+
+    <link rel="stylesheet" href="CSS/styles.css">
+
+     <!--Include jQuery Library-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+     <style> 
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #aca05e;
+            margin: 0;
+
+        }
+
+        h1{
+            text-align: center;
+            color: #333;
+
+        }
+
+        .accordion-container{
+            max-width: 600px;
+            margin: 30px auto;
+            padding-top: 40px;
+
+        }
+
+        .accordion{
+            background-color: #ffbd07;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+
+        }
+
+        .accordion:hover{
+            background-color: #b37a00;
+
+        }
+
+        .accordion.active{
+            background-color: #856d00;
+
+        }
+
+        .panel{
+            background-color: white;
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease,
+            padding 0.3s ease;
+
+        }
+
+        .panel.open{
+            padding: 15px 18px;
+
+        }
+
+        .panel p{
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <!--One of the three main components of the website: Header Tag-->
+     <header class="site-header">
+
+        <div class="header-left">
+            <img 
+        src="images/academy.png"
+        width="80"
+        height="80"
+        >  
+        <span class="site-title"><em><strong>Pawsitive Pet Academy</strong></em></span>
+        </div>
+
+        <div class="header-right">
+            <span class="current-page">About Us</span>
+            <nav class="header-nav">
+         <!--Navigation of the website-->
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="calculate.html">Calculate</a>
+        <a href="enquiry.html">Enquiry</a>
+        <a href="contact.html">Contact Us</a>
+            </nav>
+        </div> 
+</header>
+    <main>
+
+        <h2 class="intro">Information About Us</h2>
+        <hr>
+    <div class="accordion-container">
+        <!--This is where the bulk of the information is going to be-->
+
+        <!-- Accordion-->
+         <button class="accordion" aria-expanded="false">
+            Info about Pawsitive Pet Academy
+         </button>
+
+         <div class="panel">
+            <p>Welcome to Pawsitive Pet Academy! We are dedicated to providing the best pet care 
+        and training services within this evergrowing pet community. We will make sure that our pet care
+        education experience will be something you will never forget.
+    </p>
+         </div>
+
+         <!-- Accordion 2-->
+         <button class="accordion" aria-expanded="false">
+            Our Mission
+         </button>
+
+         <div class="panel">
+            <p> 
+                Our mission is to be able to promote the well-being of pets and their owners through education, training, 
+        and compassionate care. Our goal with this organisation is to make a positive impact on the lives of pets and their families.
+        We make sure that we are able to bring large amounts of pet awareness to many different communities which will help to
+        curb the amount of animal cruelty.
+            </p>
+         </div>
+
+        <!-- Accordion 3-->
+         <button class="accordion" aria-expanded="false">
+            Our Team
+         </button>
+
+         <div class="panel">
+            <p> 
+                Our team is made up of highly skilled and passionate individuals who are
+             dedicated to providing the best possible care and education for pets and 
+             their owners. We are committed to creating a positive and supportive 
+             environment for both pets and their owners, and we strive to make a 
+             difference in the lives of those we serve.
+                
+             <p>Sarah Smith</p>
+        <img
+        src="images/sarah.webp"
+        width="500"
+        height="400"
+        >
+            </p>
+         </div>
+
+         <!-- Accordion 4-->
+         <button class="accordion" aria-expanded="false">
+            About our Team
+         </button>
+
+         <div class="panel">
+            <p> 
+                The purpose of this team is to bring top-notch education of these lovely family members to
+                multiple different people from different backgrounds. It is to unite one thought
+                and that being to be able to take care of pets as if they are your own.
+                
+            </p>
+         </div>
+    </div>
+        
+    <a href="services.html">Next Page</a>
+
+    </main>
+
+    <footer>
+         <br><br>
+        <!--Footer content which is need to every single page of the website-->
+        &copy;2026 Pawsitive Pet Academy. All rights reserved.
+        Contact us on +27 xxx xxx xx
+        <a href="https://github.com/EMKNPM/xhaw5112-group-1-xhaw5112-task03-website-gr01-bulelani823">Visit Our GitHub</a>
+        <img 
+    src="images/academy.png"
+    width="50"
+    height="30"
+    >     
+    </footer>
+
+    <script src="JavaScript/accordion.js"></script>
+ 
+</body>
+</html>

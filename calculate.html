@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate - Pawsitive Pet Academy</title>
+
+    <link rel="stylesheet" href="CSS/styles.css">
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: #aca05e;
+        }
+
+        main{
+            background-color: #aca05e;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            align-content: center;
+            align-items: center;
+        }
+        .calculator-card {
+            max-width: 400px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input, select, button {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #ffbb00;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #b38300;
+        }
+        .result-box {
+            margin-top: 10px;
+            background: #e9ecef;
+            border-radius: 6px;
+        }
+
+         
+    </style>
+</head>
+<body>
+    <!--One of the three main components of the website: Header Tag-->
+     <header class="site-header">
+
+        <div class="header-left">
+            <img 
+        src="images/academy.png"
+        width="80"
+        height="80"
+        >  
+        <span class="site-title"><em><strong>Pawsitive Pet Academy</strong></em></span>
+        </div>
+
+        <div class="header-right">
+            <span class="current-page">Calculate</span>
+            <nav class="header-nav">
+         <!--Navigation of the website-->
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="calculate.html">Calculate</a>
+        <a href="enquiry.html">Enquiry</a>
+        <a href="contact.html">Contact Us</a>
+            </nav>
+        </div> 
+</header>
+<main>
+<div class="card">
+
+    <h2 class="intro">Calculate the cost:</h2>
+    <p>Welcome to our calculate page. Here you can find tools 
+            and resources to help you calculate various aspects of 
+            pet care.</p>
+        
+        <!-- Add your calculation tools and resources here -->
+    <h2>Service Quote Calculator</h2>
+        <p>Select a course and enter the number of bookings to apply automatic discount tiers:</p>
+        <!-- Information Box showing discount rules for user clarity -->
+        <div class="info-box">
+            <strong>Discount Tiers:</strong>
+            <ul style="margin: 5px 0 0 20px; padding: 0;">
+                <li>1 booking: No discount</li>
+                <li>2 bookings: 5% discount</li>
+                <li>3 bookings: 10% discount</li>
+                <li>More than 3 bookings: 15% discount</li>
+            </ul>
+        </div>
+
+        <!-- Centered Calculator Card Box -->
+        <div class="info-box">
+            
+            <h3>Select Your Courses/Bookings:</h3>
+
+            <!-- Checkbox Options with Course Prices stored in value attributes -->
+            <div class="form-group checkbox-group">
+                <label><input type="checkbox" name="course" value="750"> Puppy Care - R750</label>
+                <label><input type="checkbox" name="course" value="950"> Animal Behaviour - R1500</label>
+                <label><input type="checkbox" name="course" value="600"> Pet First Aid - R750</label>
+                <label><input type="checkbox" name="course" value="1200"> Canine Obedience Training - R1500</label>
+                <label><input type="checkbox" name="course" value="750"> Basic Dog Walking - R750</label>
+                <label><input type="checkbox" name="course" value="950"> Pet Business Management - R1500</label>
+                <label><input type="checkbox" name="course" value="600"> Pet Grooming - R1500</label>
+            </div>
+
+            <!-- Trigger Calculation Function on Click -->
+            <button onclick="calculatePrice()">Calculate Price</button>
+
+            <!-- Result Display Box -->
+            <div class="result-box" style="margin-top: 15px; padding: 10px; background: 
+            #e9ecef; border-radius: 5px; text-align: center; font-weight: bold; color: #333;">
+                Total Quote: R<span id="totalDisplay">0.00</span>
+            </div>
+        </div>
+
+        <a href="enquiry.html">Make an Enquiry</a>
+
+    </main>
+
+    <footer>
+         <br><br>
+        <!--Footer content which is need to every single page of the website-->
+        &copy;2026 Pawsitive Pet Academy. All rights reserved.
+        Contact us on +27 xxx xxx xx
+        <a href="https://github.com/EMKNPM/xhaw5112-group-1-xhaw5112-task03-website-gr01-bulelani823">Visit Our GitHub</a>
+        <img 
+    src="images/academy.png"
+    width="50"
+    height="30"
+    >     
+    </footer>
+
+    <script src="JavaScript/calculator.js"></script>
+</body>
+</html>

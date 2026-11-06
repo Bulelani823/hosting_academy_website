@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Six-week Short Courses - Pawsitive Pet Academy</title>
+
+    <link rel="stylesheet" href="CSS/styles.css">
+
+</head>
+<body>
+     <!--One of the three main components of the website: Header Tag-->
+     <header class="site-header">
+
+        <div class="header-left">
+            <img 
+        src="images/academy.png"
+        width="80"
+        height="80"
+        >  
+        <span class="site-title"><em><strong>Pawsitive Pet Academy</strong></em></span>
+        </div>
+
+        <div class="header-right">
+            <span class="current-page">Six-week Courses</span>
+            <nav class="header-nav">
+         <!--Navigation of the website-->
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="calculate.html">Calculate</a>
+        <a href="enquiry.html">Enquiry</a>
+        <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+     </header>
+
+    <main>
+
+        <h2 class="intro">Six-week courses</h2>
+
+        <hr>
+
+    <p>Welcome to our six-week short courses! These intensive programs are
+         designed to provide you with the knowledge and skills you need to 
+         succeed in the pet care industry.</p>
+
+            <div class="card-container">
+
+                <!--Course 5-->
+                <article class="courses-card">
+                    <img src="images/grooming.jpg"
+        alt="Nature Image 3"
+        onclick="openLightbox(this.src)">
+                    <div class="card-content">
+                        <h3>Puppy Care - R750</h3>
+
+                        <p class="description">
+                            To provide new puppy owners with essential care knowledge
+                        </p>
+
+                        <p>
+                            Content: Feeding, vaccinations, toliet training, exercise
+                            and socialisation
+                        </p>
+
+                        <!--Accordion button-->
+                        <button class="accordion" aria-expanded="false">
+                            More infomation
+                        </button>
+
+                        <!--Hidden Information-->
+                        <div class="panel">
+                            <div class="panel-content">
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!--Course 6-->
+                <article class="courses-card">
+                    <img src="images/first-aid.webp"
+        alt="Nature Image 3"
+        onclick="openLightbox(this.src)">
+                    <div class="card-content">
+                        <h3>Pet First Aid - R750</h3>
+
+                        <p class="description">
+                            To provide emergency first aid knowledge for pets
+                        </p>
+
+                        <p>
+                            Content: minor injuries, CPR basics, poison awareness, heatstroke 
+                            and emergency transport
+                        </p>
+
+                        <!--Accordion button-->
+                        <button class="accordion" aria-expanded="false">
+                            More infomation
+                        </button>
+
+                        <!--Hidden Information-->
+                        <div class="panel">
+                            <div class="panel-content">
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!--Course 7-->
+                <article class="courses-card">
+                     <img src="images/pet-theme.webp"
+        alt="Nature Image 3"
+        onclick="openLightbox(this.src)">
+                    <div class="card-content">
+                        <h3>Basic Dog Walking - R750</h3>
+
+                        <p class="description">
+                            To teach safe and professional dog walking practices
+                        </p>
+
+                        <p>
+                            Content: walking equipment, handling multiple dogs
+                            safety procedures and exercies routines
+                        </p>
+
+                        <!--Accordion button-->
+                        <button class="accordion" aria-expanded="false">
+                            More infomation
+                        </button>
+
+                        <!--Hidden Information-->
+                        <div class="panel">
+                            <div class="panel-content">
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+    <!--Lightbox-->
+    <div class="lightbox" 
+    id="lightbox"
+    role="dialog" 
+    aria-modal="true" 
+    aria-label="Enlarged image"
+    onclick="closeLightbox()">
+
+        <!--Close Button-->
+        <button 
+        class="close" 
+        type="button" 
+        aria-label="Close image" 
+        onclick="closeLightbox()">
+            &times;
+        </button>
+
+        <!--Enlarged Image-->
+        <img id="lightboxImage"
+        src=""
+        alt="Enlarged image"
+        onclick="event.stopPropagation()">
+
+        <!--It is to make sure that any image that the user 
+        clicks on is enlarged-->
+    </div>
+
+    <!--Lightbox Overlay-->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Expanded Destination Image">
+
+        <!--Close button-->
+        <button class="close-btn" id="closedLightbox" aria-label="Close Image">
+
+            &times;
+        </button>
+
+        <!--Enlarged image-->
+        <img src="" alt="" id="lightboxImage">
+
+    </div>
+
+    </main>
+
+    <div>
+        <label for="course-select">Select a course:</label>
+    <select id="course-select">
+        <option value="course1">Course 1: Puppy Care</option>
+        <option value="course2">Course 2: Pet First Aid</option>
+        <option value="course3">Course 3: Basic Dog Walking</option>
+    </select>
+
+    <br><br>
+    <a href="pet_grooming.html">Show Pet Grooming Courses</a>
+    <br><br>
+    <a href="pup_care.html">Show Puppy Care Courses</a>
+    <br><br>
+    <a href="calculate.html">Calculate Your Course Cost</a>
+    <br><br>
+    <a href="enquiry.html">Make an Enquiry</a>
+
+    </div>
+
+    <footer>
+        <br><br>
+        <!--Footer content which is need to every single page of the website-->
+        &copy;2026 Pawsitive Pet Academy. All rights reserved.
+        Contact us on +27 xxx xxx xx
+        <br><br>
+        <a href="https://github.com/EMKNPM/xhaw5112-group-1-xhaw5112-task03-website-gr01-bulelani823">Visit Our GitHub</a>
+        <img 
+    src="images/academy.png"
+    width="50"
+    height="30"
+    >     
+    </footer>
+    
+    <script src="JavaScript/lightbox.js"></script>
+    <script src="JavaScript/services.js">
+    </script>
+    <script src="JavaScript/accordion.js">
+    </script>
+
+</body> 
+</html>
